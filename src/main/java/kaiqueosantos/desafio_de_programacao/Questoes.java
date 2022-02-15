@@ -24,5 +24,47 @@ public class Questoes {
 
 		}
 	}
+	
+	public static int questao2(String senha) {
+		
+		// Usado na contagem de requisitos minimos de seguranca cumpridos
+		int forcaSenha = 0;
+		
+		if (senha.length() < 6) {
+			System.out.println("A senha deve ter mais " + (6 - senha.length()) + " caracteres.");
+		} else {
+			forcaSenha++;
+		}
+		
+		if (SegurancaSenha.temUmNumero(senha)) {
+			forcaSenha++;
+		} else {
+			System.out.println("A senha deve conter pelo menos um numero.");
+		}
+		
+		if (SegurancaSenha.temUmaLetraMinuscula(senha)) {
+			forcaSenha++;
+		} else {
+			System.out.println("A senha deve conter pelo menos uma letra minuscula.");
+		}
+		
+		if (SegurancaSenha.temUmaLetraMaiuscula(senha)) {
+			forcaSenha++;
+		} else {
+			System.out.println("A senha deve conter pelo menos uma letra maiuscula.");
+		}
+		
+		if (SegurancaSenha.temUmCaractereEspecial(senha)) {
+			forcaSenha++;
+		} else {
+			System.out.println("A senha deve conter pelo menos um caractere especial.");
+		}
+		
+		if (forcaSenha == 5) {
+			System.out.println("Senha forte.");
+		}
+		
+		return forcaSenha;
+	}
 
 }

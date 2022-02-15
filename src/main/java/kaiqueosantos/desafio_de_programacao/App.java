@@ -16,6 +16,16 @@ public class App
 			sc.nextLine();
 			
 			Questoes.questao1(tamanhoEscada);
+			
+			System.out.println();
+			
+			System.out.println("Questao 2");
+			System.out.println("Insira uma senha.");
+			String Senha = sc.nextLine();
+			
+			Questoes.questao2(Senha);
+			
+			System.out.println();
 		}
 		catch (InputMismatchException exception) {
 			System.out.println("Erro inesperado: entrada invalida.");
