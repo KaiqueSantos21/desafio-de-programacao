@@ -26,6 +26,14 @@ public class App
 			Questoes.questao2(Senha);
 			
 			System.out.println();
+			
+			System.out.println("Questao 3");
+			System.out.println("Insira uma palavra.");
+			String Palavra = sc.nextLine();
+			
+			int quantidadeParesAnagramas = Questoes.questao3(Palavra);
+			
+			System.out.println(quantidadeParesAnagramas + " pares de anagramas foram encontrados.");
 		}
 		catch (InputMismatchException exception) {
 			System.out.println("Erro inesperado: entrada invalida.");
