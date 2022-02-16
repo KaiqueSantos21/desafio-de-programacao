@@ -1,15 +1,15 @@
 package kaiqueosantos.desafio_de_programacao;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class SegurancaSenha {
 	
 	
 	// Conjunto com os caracteres especiais
 	// Utilizado na verificacao da seguranca da senha
-	private static final Set<Character> CARACTERES_ESPECIAIS = Stream.of('!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+').collect(Collectors.toSet());
+	private static final Set<Character> CARACTERES_ESPECIAIS = new HashSet<>(Arrays.asList('!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+'));
 	
 	public static boolean temUmNumero(String senha) {
 		for (int i = 0; i < senha.length(); i++) {
